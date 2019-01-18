@@ -31,6 +31,10 @@
 				color: @nav-font;
 				text-decoration: none;
 
+				&:hover:not(:last-of-type) {
+					text-decoration: underline;
+				}
+
 				&.sign-in {
 					.m-btn(darken(@porcelain, 15%), lighten(@btn-bg-color, 15%), 8px 16px);
 				}
