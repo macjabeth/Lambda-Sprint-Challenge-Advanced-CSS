@@ -164,6 +164,8 @@ p {
   width: 100%;
   padding: 25px 0 15px;
   background-color: #f6f6f6;
+  position: fixed;
+  opacity: 0.95;
 }
 .main-navigation .nav-container {
   display: flex;
@@ -223,6 +225,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home .intro {
+  padding-top: 130px;
 }
 .home .intro img {
   max-width: 100%;
