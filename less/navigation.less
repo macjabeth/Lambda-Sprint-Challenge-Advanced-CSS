@@ -1,1 +1,44 @@
-// Navigation code here
+.main-navigation {
+	width: 100%;
+	padding: 25px 0 15px;
+	background-color: @nav-bg;
+	position: fixed;
+	opacity: 0.95;
+
+	.nav-container {
+		.m-flex(@w: wrap);
+
+		h1 {
+			font-size: 3.5rem;
+			width: 100%;
+			margin-bottom: 20px;
+
+			@media @desktop {
+				font-size: 4rem;
+			}
+		}
+
+		nav {
+			.m-flex(space-evenly);
+			width: 100%;
+
+			@media @desktop {
+				width: 70%;
+			}
+
+			a {
+				font-size: 1.6rem;
+				color: @nav-font;
+				text-decoration: none;
+
+				&:hover:not(:last-of-type) {
+					text-decoration: underline;
+				}
+
+				&.sign-in {
+					.m-btn(darken(@porcelain, 15%), lighten(@btn-bg-color, 15%), 8px 16px);
+				}
+			}
+		}
+	}
+}
