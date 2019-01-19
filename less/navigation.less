@@ -1,6 +1,6 @@
 .main-navigation {
 	width: 100%;
-	padding: 25px 0 15px;
+	padding-top: 15px;
 	background-color: @nav-bg;
 	position: fixed;
 	opacity: 0.95;
@@ -9,9 +9,9 @@
 		.m-flex(@w: wrap);
 
 		h1 {
-			font-size: 3.5rem;
+			font-size: 4rem;
 			width: 100%;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 
 			@media @desktop {
 				font-size: 4rem;
@@ -20,7 +20,7 @@
 
 		nav {
 			.m-flex(space-evenly);
-			width: 100%;
+			width: 85%;
 
 			@media @desktop {
 				width: 70%;
@@ -36,7 +36,7 @@
 				}
 
 				&.sign-in {
-					.m-btn(darken(@porcelain, 15%), lighten(@btn-bg-color, 15%), 8px 16px);
+					.m-btn(darken(@porcelain, 15%), lighten(@btn-bg-color, 15%), 5px 15px);
 				}
 			}
 		}

@@ -136,6 +136,7 @@ html,
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #5e6164;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 h1,
 h2,
@@ -144,22 +145,24 @@ h4,
 h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293b;
-  opacity: 1;
-  transition: opacity 0.5s 2s, transform 0.5s 0.5s;
-}
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover {
-  opacity: 0;
-  transform: rotate(0.5turn);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 h2 {
   font-size: 3.2rem;
 }
 h3 {
   font-size: 2.8rem;
+}
+h2,
+h3 {
+  opacity: 1;
+  transition: 1s;
+  width: 70%;
+}
+h2:hover,
+h3:hover {
+  opacity: 0.3;
+  transform: translateX(50px);
 }
 p {
   font-size: 1.6rem;
@@ -172,7 +175,7 @@ p {
 }
 .main-navigation {
   width: 100%;
-  padding: 25px 0 15px;
+  padding-top: 15px;
   background-color: #f6f6f6;
   position: fixed;
   opacity: 0.95;
@@ -185,9 +188,9 @@ p {
   flex-wrap: wrap;
 }
 .main-navigation .nav-container h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 @media (min-width: 500px) {
   .main-navigation .nav-container h1 {
@@ -200,7 +203,7 @@ p {
   align-items: center;
   text-align: center;
   flex-wrap: nowrap;
-  width: 100%;
+  width: 85%;
 }
 @media (min-width: 500px) {
   .main-navigation .nav-container nav {
@@ -212,11 +215,14 @@ p {
   color: #454a59;
   text-decoration: none;
 }
+.main-navigation .nav-container nav a:hover:not(:last-of-type) {
+  text-decoration: underline;
+}
 .main-navigation .nav-container nav a.sign-in {
   background-color: #cbd1d7;
   color: #3e496a;
   text-align: center;
-  padding: 8px 16px;
+  padding: 5px 15px;
   border-radius: 5px;
   font-size: 1.6rem;
   font-weight: bold;
@@ -238,7 +244,7 @@ footer {
   align-items: center;
 }
 .home .intro {
-  padding-top: 130px;
+  padding-top: 100px;
 }
 .home .intro img {
   max-width: 100%;
@@ -300,6 +306,7 @@ footer {
 @media (min-width: 500px) {
   .home .walk {
     margin-top: 60px;
+    padding: 52px 60px;
   }
 }
 @media (min-width: 500px) {
@@ -330,21 +337,22 @@ footer {
 }
 @media (min-width: 500px) {
   .home .walk .walk-text .btn {
-    padding: 10px 0;
-    font-size: 1.5rem;
+    padding: 8px 0;
+    font-size: 1.8rem;
     width: 30%;
   }
 }
 .home .walk .walk-img {
-  width: 100%;
-  order: -1;
   margin-bottom: 20px;
+  order: -1;
+  width: 100%;
 }
 @media (min-width: 500px) {
   .home .walk .walk-img {
-    width: 46%;
+    margin-bottom: 60px;
     margin-left: 4%;
     order: 0;
+    width: 46%;
   }
 }
 .home .walk .walk-img img {
